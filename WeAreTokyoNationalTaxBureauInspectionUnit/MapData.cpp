@@ -6,7 +6,8 @@
 // 後ろ２つの引数をstd::stringからintへ変換するためだけのコンストラクタ
 MapData::MapData(const std::string MapCSVFilePath, const std::string MapChipSheetFilePath, const std::string HitJudgeInfoCSVFilePath,
 	const std::string ItemMapCSVFilePath, const std::string MapChipWidth, const std::string MapChipHeight, const std::string MapChipTotal)
-	: MapData(MapCSVFilePath, MapChipSheetFilePath, HitJudgeInfoCSVFilePath, ItemMapCSVFilePath, std::stoi(MapChipWidth), std::stoi(MapChipHeight), std::stoi(MapChipHeight)) {}
+	: MapData(MapCSVFilePath, MapChipSheetFilePath, HitJudgeInfoCSVFilePath, ItemMapCSVFilePath, std::stoi(MapChipWidth),
+		std::stoi(MapChipHeight), std::stoi(MapChipHeight)) {}
 
 // 実際にマップ情報を読み取るコンストラクタ
 MapData::MapData(const std::string MapCSVFilePath, const std::string MapChipSheetFilePath, const std::string HitJudgementInfoCSVFilePath,
