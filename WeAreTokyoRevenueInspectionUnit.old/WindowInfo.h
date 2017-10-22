@@ -1,3 +1,3 @@
 #pragma once
 #include<Windows.h>
-RECT rc;
+extern RECT rc;
