@@ -264,5 +264,5 @@ __pycache__/
 .vscode/
 
 # Other
-*.lcr
+*.old/
 desktop.ini
