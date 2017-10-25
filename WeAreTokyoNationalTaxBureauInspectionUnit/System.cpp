@@ -1,5 +1,4 @@
 #include "Core.hpp"
-
 #include "KgDxGraphic.hpp"
 
 static void Launch() {

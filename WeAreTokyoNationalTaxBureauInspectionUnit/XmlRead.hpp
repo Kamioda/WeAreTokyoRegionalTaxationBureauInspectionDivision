@@ -80,5 +80,4 @@ public:
 	Node operator [] (const size_t Count) const { return this->at(Count); }
 	Node operator [] (const std::basic_string<TCHAR> NodePath) const; // WStringToString‚ðŽg‚¤ŠÖŒW‚Åcpp‘¤‚É’è‹`
 };
-
 #endif

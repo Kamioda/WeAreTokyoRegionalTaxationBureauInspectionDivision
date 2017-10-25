@@ -2,5 +2,7 @@
 #define __CORE_HPP__
 #include "ApplicationDirectory.hpp"
 
-ApplicationDirectory AppPath;
+extern ApplicationDirectory AppPath;
+extern bool PCSPRunFlag;
+extern std::string UserName;
 #endif
