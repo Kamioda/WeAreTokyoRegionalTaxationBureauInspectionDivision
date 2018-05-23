@@ -18,7 +18,7 @@ Escキー：キャンセル
 
 ## 参考ホームページ
 - [税務調査の注意点](http://tax.ma-bank.com/faq.php?id=q13)
-- [国税庁ホームページ -確定申告を間違えたとき](https://www.nta.go.jp/taxanswer/shotoku/2026.htm)
-- [国税庁ホームページ -確定申告を忘れたとき](https://www.nta.go.jp/taxanswer/shotoku/2024.htm)
+- [国税庁ホームページ -確定申告を間違えたとき](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2026.htm)
+- [国税庁ホームページ -確定申告を忘れたとき](https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/2024.htm)
 
 
