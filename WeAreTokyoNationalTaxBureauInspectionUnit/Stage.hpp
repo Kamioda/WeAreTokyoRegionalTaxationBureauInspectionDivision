@@ -7,6 +7,7 @@ struct StageFileInfo {
 	std::basic_string<TCHAR> Author;
 	std::basic_string<TCHAR> TaxName;
 	Tax Surcharge;
+	Tax DelayTax;
 	int StageWidth;
 	int StageHeight;
 	int MapChipWidth;
