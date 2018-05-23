@@ -1,57 +1,18 @@
-#include "Send.hpp"
-#include "D:/Users/AinoMegumi/BitBucket/Kamioda Games/CommonSourceCode/Split.hpp"
-#include <Windows.h>
+ï»¿#include "ClientInformation.hpp"
+#include "KgDxSystem.hpp"
 #include "KgWinException.hpp"
 
-static inline void SendExceptionMessageToService(const std::string GameTitle, const std::string ExceptionName, const std::string ExceptionMessage) {
+int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR lpCmdLine, int) {
 	try {
-		std::ostringstream ostr;
-		Send snd(ostr, 300); // KgSvchost.exe‚Ì—áŠO‚Ìo—ÍƒXƒŒƒbƒh‚É“n‚·
-		snd.InputData(GameTitle);
-		snd.InputData(ExceptionName);
-		snd.InputData(ExceptionMessage);
-		snd.send(ostr);
+		KgDxSystem::System Sys(GameTitle, 1280, 720, true, KgDxGraphic::Color(TEXT("#ffffff")), KgDxGraphic::Color(TEXT("#ffffff")));
+
+		Sys.End();
+		return 0;
 	}
 	catch (const std::exception& er) {
-		MessageBoxA(NULL, 
-			(std::string("ƒT[ƒrƒX‚Ö‚ÌƒGƒ‰[ƒƒbƒZ[ƒW‚Ì‘—M‚É¸”s‚µ‚Ü‚µ‚½B\nŒ´ˆö : ") + er.what()).c_str(),
-			"“Œ‹‘Å‹Ç¸@•”‚Å‚·", MB_ICONERROR | MB_OK);
-	}
-}
-
-std::vector<std::string> SplitString(const std::string Data, const std::string sep) {
-	std::vector<std::string> Arr;
-	size_t pos = 0;
-	while (pos != std::string::npos) {
-		size_t p = Data.find(sep, pos);
-		if (p == std::string::npos) {
-			Arr.push_back(Data.substr(pos));
-			break;
-		}
-		else Arr.push_back(Data.substr(pos, p - pos));
-		pos = p + sep.size();
-	}
-	return Arr;
-}
-
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int CmdShow) {
-	UNREFERENCED_PARAMETER(hInstance);
-	UNREFERENCED_PARAMETER(hPrevInstance);
-	UNREFERENCED_PARAMETER(CmdShow);
-	try {
-		if (std::strlen(lpCmdLine) == 0) {
-
-		}
-		else {
-			const std::vector<std::string> Args = SplitString(lpCmdLine, " ");
-		}
-	}
-	catch (const std::exception& er) {
-		SendExceptionMessageToService("WeAreTokyoNationalTaxBureauInspectionUnit", "std::exception", er.what());
-		return MessageBoxA(NULL, er.what(), "“Œ‹‘Å‹Ç¸@•”‚Å‚·", MB_ICONERROR | MB_OK);
+		MessageBoxA(NULL, er.what(), GameTitleA, MB_ICONERROR | MB_OK);
 	}
 	catch (const KgWinException& kex) {
-		SendExceptionMessageToService("WeAreTokyoNationalTaxBureauInspectionUnit", "KgWinException", kex.what());
-		return kex.GraphErrorMessageOnMessageBox("“Œ‹‘Å‹Ç¸@•”‚Å‚·");
+		kex.GraphErrorMessageOnMessageBox(GameTitleA);
 	}
 }
