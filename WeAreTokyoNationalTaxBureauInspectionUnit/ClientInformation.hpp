@@ -1,8 +1,8 @@
-#pragma once
+ï»¿#pragma once
 constexpr int WindowWidth = 1280;
 constexpr int WindowHeight = 720;
-constexpr const char* GameTitleA = "“Œ‹‘Å‹Ç¸@•”‚Å‚·";
-constexpr const wchar_t* GameTitleW = L"“Œ‹‘Å‹Ç¸@•”‚Å‚·";
+constexpr const char* GameTitleA = "æ±äº¬å›½ç¨å±€æŸ»å¯Ÿéƒ¨ã§ã™";
+constexpr const wchar_t* GameTitleW = L"æ±äº¬å›½ç¨å±€æŸ»å¯Ÿéƒ¨ã§ã™";
 #ifdef UNICODE
 constexpr const wchar_t* GameTitle = GameTitleW;
 #else

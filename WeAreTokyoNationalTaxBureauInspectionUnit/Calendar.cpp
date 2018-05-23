@@ -1,4 +1,4 @@
-#include "Calendar.hpp"
+ï»¿#include "Calendar.hpp"
 #include <string>
 #include <array>
 #include <chrono>
@@ -62,11 +62,11 @@ Calendar Calendar::operator - (const Calendar cal) const {
 	if (temp.Day <= 0) {
 		if (IsNo31Month(temp.Month)) temp.Day += 31;
 		else if (temp.Month != 3) temp.Day += 30;
-		else temp.Day += (IsLeapYear(this->Year) ? 29 : 28); // ‚RŒ‚©‚ç‚Ìˆø‚«Z‚¾‚Æ‚»‚Ì‘O‚ª‰[”N‚©‚Ç‚¤‚©‚ÅDay‚É‰ÁZ‚·‚é’l‚ª•Ï‚í‚Á‚Ä‚­‚é
+		else temp.Day += (IsLeapYear(this->Year) ? 29 : 28); // ï¼“æœˆã‹ã‚‰ã®å¼•ãç®—ã ã¨ãã®å‰ãŒé–å¹´ã‹ã©ã†ã‹ã§Dayã«åŠ ç®—ã™ã‚‹å€¤ãŒå¤‰ã‚ã£ã¦ãã‚‹
 		temp.Month -= 1;
 	}
 	temp.Month -= cal.Month;
-	while (temp.Month <= 0) { // Å‘å‚Qƒ‹[ƒv
+	while (temp.Month <= 0) { // æœ€å¤§ï¼’ãƒ«ãƒ¼ãƒ—
 		temp.Month += 12;
 		temp.Year -= 1;
 	}

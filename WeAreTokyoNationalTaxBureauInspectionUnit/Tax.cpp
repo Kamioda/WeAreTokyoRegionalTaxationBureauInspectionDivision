@@ -1,4 +1,4 @@
-#include "Tax.hpp"
+ï»¿#include "Tax.hpp"
 
 static inline standard::number<unsigned int> PickupLastFourDigits(standard::number<unsigned long> &temp) {
 	standard::number<unsigned int> num(static_cast<unsigned int>(temp.Get() % 10000), 1000, 0);
@@ -15,13 +15,13 @@ Tax::Tax(const unsigned long Tax) {
 }
 
 std::string Tax::to_astring() const {
-	return std::to_string(this->OneHundredMillion.Get()) + "‰­"
-		+ std::to_string(this->TenThousand.Get()) + "–œ"
-		+ std::to_string(this->LessThanTenThousand.Get()) + "‰~";
+	return std::to_string(this->OneHundredMillion.Get()) + "å„„"
+		+ std::to_string(this->TenThousand.Get()) + "ä¸‡"
+		+ std::to_string(this->LessThanTenThousand.Get()) + "å††";
 }
 
 std::wstring Tax::to_wstring() const {
-	return std::to_wstring(this->OneHundredMillion.Get()) + L"‰­"
-		+ std::to_wstring(this->TenThousand.Get()) + L"–œ"
-		+ std::to_wstring(this->LessThanTenThousand.Get()) + L"‰~";
+	return std::to_wstring(this->OneHundredMillion.Get()) + L"å„„"
+		+ std::to_wstring(this->TenThousand.Get()) + L"ä¸‡"
+		+ std::to_wstring(this->LessThanTenThousand.Get()) + L"å††";
 }
