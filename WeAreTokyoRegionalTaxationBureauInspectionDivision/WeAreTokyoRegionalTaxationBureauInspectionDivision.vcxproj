@@ -32,9 +32,9 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E2005052-4BB2-4EE5-947D-4FD0E49156B9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>WeAreTokyoNationalTaxBureauInspectionUnit</RootNamespace>
+    <RootNamespace>WeAreTokyoRegionalTaxationBureauInspectionDivision</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>WeAreTokyoNationalTaxBureauInspectionUnit</ProjectName>
+    <ProjectName>WeAreTokyoRegionalTaxationBureauInspectionDivision</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
